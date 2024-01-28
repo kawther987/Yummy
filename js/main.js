@@ -94,7 +94,7 @@ async function searchByFirstLetter(letter) {
   $(".loadingScreen").removeClass("d-none");
   $(".secContact").addClass("d-none");
 
-  letter == "" ? (term = "p") : "";
+  letter == "" ? (letter = "p") : "";
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`
   );
