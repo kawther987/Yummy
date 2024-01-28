@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <!-- fontawesome file -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- bootstarap js -->
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <!-- jQuery -->
+    <script src="./js/jquery-3.7.1.min.js" defer></script>
+    <!-- main js -->
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <aside class="d-flex position-fixed">
+      <div class="sideBar bg-black d-flex justify-content-between flex-column">
+        <ul class="menu list-unstyled pt-4 ps-4 overflow-hidden">
+          <li class="searchBtn">
+            <a href="#">Search</a>
+          </li>
+          <li class="categories">
+            <a href="#">Categories</a>
+          </li>
+          <li class="area">
+            <a href="#">Area</a>
+          </li>
+          <li class="ingredients">
+            <a href="#">Ingredients</a>
+          </li>
+          <li class="contact">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+        <div class="ps-4">
+          <ul class="list-unstyled d-flex gap-4">
+            <li>
+              <i class="fa-xl fab fa-facebook"></i>
+            </li>
+            <li>
+              <i class="fa-xl fab fa-twitter"></i>
+            </li>
+            <li>
+              <i class="fa-xl fas fa-globe"></i>
+            </li>
+          </ul>
+          <p class="mb-4">
+            Copyright Â© 2024 All Rights<br />
+            Reserved.
+          </p>
+        </div>
+      </div>
+      <div
+        class="p-2 d-flex flex-column align-items-center justify-content-between bg-white text-black"
+      >
+        <figure>
+          <img src="./images/logo.png" alt="logo" width="50px" />
+        </figure>
+        <div>
+          <i class="closeBtn fa-2x fas fa-xmark d-none" role="button"></i>
+          <i class="openBtn fa-2x fas fa-align-justify" role="button"></i>
+        </div>
+
+        <i class="mode fas fa-sun fa-2x" role="button"></i>
+      </div>
+    </aside>
+
+    <div class="loadingScreen d-none">
+      <span class="loader"></span>
+    </div>
+
+    <section class="search w-75 container m-auto py-4"></section>
+
+    <section class="py-4">
+      <div class="container">
+        <div class="RowData row g-4">
+          <!-- <div class="col-md-6 col-lg-3">
+            <div class="meal position-relative overflow-hidden rounded-3">
+              <img src="./images/logo.png" alt="meal" class="img-fluid" />
+              <div class="layer position-absolute d-flex align-items-center">
+                <h2 class="p-2">Title</h2>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="secContact container d-none">
+      <form class="my-5 text-center" id="register">
+        <div class="row g-4 mt-5">
+          <div class="col-md-6">
+            <div class="form-data">
+              <input
+                type="text"
+                id="uName"
+                class="form-control"
+                placeholder="Enter Your Name"
+              />
+
+              <ul class="alert alert-danger p-0 invalid-feedback">
+                <li>First Name Is Required</li>
+                <li>Minmum Length 2 and Maxmum 20</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-data">
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Email Address"
+              />
+              <ul class="alert alert-danger p-0 invalid-feedback">
+                <li>Email Is Required</li>
+                <li>InValid Email Formate</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-data">
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                placeholder="Enter Phone Number"
+              />
+              <ul class="alert alert-danger p-0 invalid-feedback">
+                <li>Age Is Required</li>
+                <li>Enter valid Phone Number</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-data">
+              <input
+                type="number"
+                id="age"
+                class="form-control"
+                placeholder="Enter Age"
+              />
+              <ul class="alert alert-danger p-0 invalid-feedback">
+                <li>Age Is Required</li>
+                <li>Minimum 10 Maxmum 80</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-data">
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Password"
+              />
+              <ul class="alert alert-danger p-0 invalid-feedback">
+                <li>Password Is Required</li>
+                <li>
+                  Minimum eight characters, at least one letter and one number
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-data">
+              <input
+                type="password"
+                id="repassword"
+                class="form-control"
+                placeholder="Repassword"
+              />
+              <ul class="alert alert-danger p-0 invalid-feedback">
+                <li>Password Is Required</li>
+                <li>Should match your password</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-outline-danger mt-3 px-2"
+          id="btnRegister"
+          disabled
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
