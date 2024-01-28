@@ -430,9 +430,8 @@ $("#phone").on("input", () => {
 $("#password").on("input", () => {
   validation(password, regexPass);
 });
-$("#repassword").on("input", repass);
+// $("#repassword").on("input", repass);
 $("form").on("submit", function (e) {
   e.preventDefault();
-  validationInputs();
 });
 $("form").on("input", validationInputs);
