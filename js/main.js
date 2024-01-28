@@ -223,9 +223,7 @@ function displayIngred(data) {
   for (let i = 0; i < data.length; i++) {
     meal += ` 
     <div class="col-md-6 col-lg-3">
-        <div class="text-center h-100" role="button" onclick=getIngDetaileApi('${
-          data[i].strIngredient
-        }')>
+        <div class="text-center h-100" role="button" onclick="getIngDetaileApi('${data[i].strIngredient}')">
             <i class="fa-solid fa-drumstick-bite fa-4x"></i>
             <h2 class="p-2">${data[i].strIngredient}</h2>
             <p>${data[i].strDescription
@@ -415,21 +413,21 @@ $(".categories").on("click", getCategory).on("click", closeNav);
 $(".area").on("click", getArea).on("click", closeNav);
 $(".ingredients").on("click", getIngred).on("click", closeNav);
 $(".contact").on("click", openContactPage).on("click", closeNav);
-$("#uName").on("input", () => {
-  validation(uName, regexName);
-});
-$("#email").on("input", () => {
-  validation(email, regexEmail);
-});
-$("#age").on("input", () => {
-  validation(age, regexAge);
-});
-$("#phone").on("input", () => {
-  validation(phone, regexPhone);
-});
-$("#password").on("input", () => {
-  validation(password, regexPass);
-});
+// $("#uName").on("input", () => {
+//   validation(uName, regexName);
+// });
+// $("#email").on("input", () => {
+//   validation(email, regexEmail);
+// });
+// $("#age").on("input", () => {
+//   validation(age, regexAge);
+// });
+// $("#phone").on("input", () => {
+//   validation(phone, regexPhone);
+// });
+// $("#password").on("input", () => {
+//   validation(password, regexPass);
+// });
 // $("#repassword").on("input", repass);
 $("form").on("submit", function (e) {
   e.preventDefault();
